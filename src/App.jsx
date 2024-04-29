@@ -8,6 +8,7 @@ import Reviews from "./Components/Reviews";
 import Heroes2 from "./Components/Heroes2";
 import LatestRelease from "./Components/LatestRelease";
 import RestCards from "./Components/RestCards";
+import BestSellers from "./Components/BestSellers";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Heroes2 />
       <LatestRelease />
       <RestCards />
+      <BestSellers />
     </>
   );
 }
