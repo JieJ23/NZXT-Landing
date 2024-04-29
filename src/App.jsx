@@ -6,6 +6,8 @@ import PCSelections from "./Components/Selection";
 import Card2 from "./Components/Card2";
 import Reviews from "./Components/Reviews";
 import Heroes2 from "./Components/Heroes2";
+import LatestRelease from "./Components/LatestRelease";
+import RestCards from "./Components/RestCards";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
       <Card2 />
       <Reviews />
       <Heroes2 />
+      <LatestRelease />
+      <RestCards />
     </>
   );
 }

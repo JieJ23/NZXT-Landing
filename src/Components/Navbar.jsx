@@ -81,7 +81,7 @@ export default function NavbarMain() {
   }, []);
 
   return (
-    <div className="mx-auto w-full py-3 px-10 bg-[#282828]">
+    <div className="mx-auto w-full py-2 px-10 bg-[#282828] sticky top-[42px] right-0 z-40">
       <div className="flex items-center justify-between text-white">
         <IconButton
           variant="text"

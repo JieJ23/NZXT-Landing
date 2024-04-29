@@ -105,14 +105,14 @@ function CardPC({ product, name, cpu, gpu, price, img, type, rating }) {
 export default function PCSelections() {
   return (
     <div className="my-24 px-14 max-w-[1200px] mx-auto">
-      <section>
+      <section className="my-8">
         <Typography variant="h1" className="text-center">
           NZXT Prebuilt Gaming PCs
         </Typography>
         <Typography
           variant="h6"
           color="blue-gray"
-          className="text-center opacity-80 px-16 w-full lg:w-1/2 mx-auto"
+          className="text-center opacity-60 px-6 lg:px-12 w-full lg:w-1/2 mx-auto"
         >
           We use the latest generation performance components and configurations
           to get you gaming, fast.
