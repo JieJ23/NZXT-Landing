@@ -365,7 +365,7 @@ export default function NavbarWithMegaMenu() {
 
   return (
     <Navbar
-      className="m-0 border-none w-full px-2 lg:px-10 py-2 bg-[#131111]"
+      className="m-0 border-none w-full px-2 lg:px-10 py-2 bg-[#131111] sticky top-[42px] right-0 z-40"
       fullWidth={true}
       shadow={false}
       color="black"
