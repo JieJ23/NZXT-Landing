@@ -271,10 +271,73 @@ function NavListMenu() {
       </Menu>
       <div className="block lg:hidden">
         <Collapse open={isMobileMenuOpen}>
-          <Carousel className="">
-            <div>{renderItems}</div>
-            <div>{renderItems2}</div>
-            <div>{renderItems3}</div>
+          <Carousel
+            loop={true}
+            navigation={({ setActiveIndex, activeIndex, length }) => (
+              <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+                {new Array(length).fill("").map((_, i) => (
+                  <span
+                    key={i}
+                    className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
+                      activeIndex === i ? "w-0 bg-white" : "w-0 bg-white/50"
+                    }`}
+                    onClick={() => setActiveIndex(i)}
+                  />
+                ))}
+              </div>
+            )}
+            prevArrow={({ handlePrev }) => (
+              <IconButton
+                variant="text"
+                color="white"
+                size="sm"
+                onClick={handlePrev}
+                className="!absolute top-1/2 left-0 -translate-y-1/2"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={2}
+                  stroke="currentColor"
+                  className="h-5 w-5"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+                  />
+                </svg>
+              </IconButton>
+            )}
+            nextArrow={({ handleNext }) => (
+              <IconButton
+                variant="text"
+                color="white"
+                size="sm"
+                onClick={handleNext}
+                className="!absolute top-2/4 right-0 -translate-y-2/4"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={2}
+                  stroke="currentColor"
+                  className="h-5 w-5"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                  />
+                </svg>
+              </IconButton>
+            )}
+          >
+            <div className="ms-10">{renderItems}</div>
+            <div className="ms-10">{renderItems2}</div>
+            <div className="ms-10">{renderItems3}</div>
           </Carousel>
         </Collapse>
       </div>
@@ -302,7 +365,7 @@ export default function NavbarWithMegaMenu() {
 
   return (
     <Navbar
-      className="m-0 border-none w-full px-10 py-2 bg-[#131111]"
+      className="m-0 border-none w-full px-2 lg:px-10 py-2 bg-[#131111]"
       fullWidth={true}
       shadow={false}
       color="black"
